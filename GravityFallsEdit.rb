@@ -23,7 +23,7 @@ live_loop :song do
   sleep 0.5
   play :fb5
   sleep 1
-  sample :bd_boom, amp:5
+  sample :bd_boom, amp:5, sustain_level: 2
   with_fx :compressor do
     play :gb5
   end
@@ -41,6 +41,25 @@ live_loop :song do
   
   #bass-line2
   with_fx :rlpf do
+    2.times do
+      play :fb3
+      sleep 0.5
+      play :db2
+      sleep 0.5
+      play :ab3
+      sleep 0.5
+      play :db2
+      sleep 0.5
+      
+      play :eb2
+      sleep 0.5
+      play :ab2
+      sleep 0.5
+      play :db3
+      sleep 0.5
+      play :ab2
+      sleep 0.5
+    end
     play :fb3
     sleep 0.5
     play :db2
@@ -58,50 +77,6 @@ live_loop :song do
     sleep 0.5
     play :ab2
     sleep 0.5
-    
     play :fb3
-    sleep 0.5
-    play :db2
-    sleep 0.5
-    play :ab3
-    sleep 0.5
-    play :db2
-    sleep 0.5
-    
-    play :eb2
-    sleep 0.5
-    play :ab2
-    sleep 0.5
-    play :db3
-    sleep 0.5
-    play :ab2
-    sleep 0.5
-    
-    play :fb3
-    sleep 0.5
-    play :db2
-    sleep 0.5
-    play :ab3
-    sleep 0.5
-    play :db2
-    sleep 0.5
-    
-    play :eb2
-    sleep 0.5
-    play :ab2
-    sleep 0.5
-    play :db3
-    sleep 0.5
-    play :ab2
-    sleep 0.5
-    
-    play :fb3
-    sleep 0.5
-    play :db2
-    sleep 0.5
-    play :ab3
-    sleep 0.5
-    play :db2
-    sleep 0.5
+    sleep 2
   end
-end

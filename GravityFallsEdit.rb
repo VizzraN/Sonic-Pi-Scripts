@@ -1,3 +1,7 @@
+#The Song is the Gravity Falls Theme
+#I found the piano notes on this site https://musescore.com/brycepoindexter/scores/1871671
+#I know the BPM because it is at the top of the sheet music on the site above
+
 use_bpm 160
 live_loop :song do
   use_synth :blade
@@ -17,7 +21,7 @@ live_loop :song do
   sleep 0.5
   play :db5
   sleep 0.5
-  play :ab4
+  play :ab
   sleep 0.5
   play :db5
   sleep 0.5
@@ -27,7 +31,6 @@ live_loop :song do
   with_fx :compressor do
     play :gb5
   end
-  
   #used fx compressor to make it sound better
   
   play :eb2

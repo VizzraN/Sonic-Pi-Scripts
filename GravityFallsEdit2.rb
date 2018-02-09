@@ -18,25 +18,44 @@ live_loop :song do
   sample :ambi_choir, rate: 0.2, amp: 2
   4.times do
     play :fb5
+    sample :drum_tom_hi_hard
     sleep 0.5
     play :db5
+    sample :drum_tom_hi_hard
     sleep 0.5
     play :ab4
+    sample :drum_tom_hi_soft
+    sample :drum_cymbal_hard
     sleep 0.5
     play :db5
+    sample :drum_tom_hi_hard
     sleep 0.5
   end
   
-  play :fb5
-  sleep 0.5
-  play :db5
-  sleep 0.5
-  play :ab
-  sleep 0.5
-  play :db5
-  sleep 0.5
-  play :fb5
-  sleep 1
+  4.times do
+    play :fb5
+    sample :drum_tom_hi_hard
+    sample :drum_cymbal_pedal
+    sample :drum_bass_soft
+    sleep 0.5
+    play :db5
+    sample :drum_tom_hi_hard
+    sample :drum_cymbal_pedal
+    sample :drum_bass_soft
+    sleep 0.5
+    play :ab4
+    sample :drum_tom_hi_soft
+    sample :drum_cymbal_hard
+    sample :drum_bass_hard
+    sleep 0.5
+    play :db5
+    sample :drum_tom_hi_hard
+    sample :drum_cymbal_pedal
+    sample :drum_bass_soft
+    sleep 0.5
+  end
+  
+  
   sample :bd_boom, amp:5, sustain_level: 2
   with_fx :compressor do
     play :gb5

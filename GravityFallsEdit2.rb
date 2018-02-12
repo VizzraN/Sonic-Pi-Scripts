@@ -1,6 +1,12 @@
 #The Song is the Gravity Falls Theme
 #I found the piano notes on this site https://musescore.com/brycepoindexter/scores/1871671
 #I know the BPM because it is at the top of the sheet music on the site above
+a = :drum_tom_hi_hard
+b = :drum_tom_hi_soft
+c = :drum_cymbal_pedal
+d = :drum_bass_soft
+e = :drum_cymbal_hard
+x = 1
 
 use_bpm 160
 live_loop :song do
@@ -18,41 +24,43 @@ live_loop :song do
   sample :ambi_choir, rate: 0.2, amp: 2
   4.times do
     play :fb5
-    sample :drum_tom_hi_hard
+    sample a, amp: x
     sleep 0.5
     play :db5
-    sample :drum_tom_hi_hard
+    sample a, amp: x
     sleep 0.5
     play :ab4
-    sample :drum_tom_hi_soft
-    sample :drum_cymbal_hard
+    sample b, amp: x
+    sample e, amp: x
     sleep 0.5
     play :db5
-    sample :drum_tom_hi_hard
+    sample a, amp: x
     sleep 0.5
+    x=x+0.5
   end
   
   4.times do
     play :fb5
-    sample :drum_tom_hi_hard
-    sample :drum_cymbal_pedal
-    sample :drum_bass_soft
+    sample a, amp: x
+    sample c, amp: x
+    sample d, amp: x
     sleep 0.5
     play :db5
-    sample :drum_tom_hi_hard
-    sample :drum_cymbal_pedal
-    sample :drum_bass_soft
+    sample a, amp: x
+    sample c, amp: x
+    sample d, amp: x
     sleep 0.5
     play :ab4
-    sample :drum_tom_hi_soft
-    sample :drum_cymbal_hard
+    sample b, amp: x
+    sample e, amp: x
     sample :drum_bass_hard
     sleep 0.5
     play :db5
-    sample :drum_tom_hi_hard
-    sample :drum_cymbal_pedal
-    sample :drum_bass_soft
+    sample a, amp: x
+    sample c, amp: x
+    sample d, amp: x
     sleep 0.5
+    x=x+0.5
   end
   
   
